@@ -61,7 +61,7 @@ data "aws_ami" "ubuntu_01" {
 
 resource "aws_instance" "ec2_01" {
   provider = aws.aws_01
-  ami           = data.aws_ami.ubuntu.id
+  ami           = data.aws_ami.ubuntu_01.id
   instance_type = "t3.micro"
 
   tags = {
@@ -88,7 +88,7 @@ data "aws_ami" "ubuntu_02" {
 
 resource "aws_instance" "ec2_02" {
   provider = aws.aws_02
-  ami           = data.aws_ami.ubuntu.id
+  ami           = data.aws_ami.ubuntu_02.id
   instance_type = "t3.micro"
 
   tags = {
