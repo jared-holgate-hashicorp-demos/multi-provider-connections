@@ -1,19 +1,19 @@
-variable "aws-access-key-01" {
+variable "aws_access_key_01" {
     type = string
     sensitive = true
 }
 
-variable "aws-secret-key-01" {
+variable "aws_secret_key_01" {
     type = string
     sensitive = true
 }
 
-variable "aws-access-key-02" {
+variable "aws_access_key_02" {
     type = string
     sensitive = true
 }
 
-variable "aws-secret-key-02" {
+variable "aws_secret_key_02" {
     type = string
     sensitive = true
 }
@@ -31,15 +31,15 @@ terraform {
 provider "aws" {
     alias = "aws_01"
     region = "us-east-1"
-    access_key = var.aws-access-key-01
-    secret_key = var.aws-secret-key-01
+    access_key = var.aws_access_key_01
+    secret_key = var.aws_secret_key_01
 }
 
 provider "aws" {
     alias = "aws_02"
     region = "us-east-1"
-    access_key = var.aws-access-key-02
-    secret_key = var.aws-secret-key-02
+    access_key = var.aws_access_key_02
+    secret_key = var.aws_secret_key_02
 }
 
 data "aws_ami" "ubuntu_01" {
