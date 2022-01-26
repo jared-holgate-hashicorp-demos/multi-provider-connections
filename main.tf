@@ -92,6 +92,6 @@ resource "aws_instance" "ec2_02" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = "EC2_In_Account_01"
+    Name = "EC2_In_Account_02"
   }
 }
